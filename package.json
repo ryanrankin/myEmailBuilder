@@ -1,0 +1,26 @@
+{
+  "name": "myEmailBuilder",
+  "version": "1.0.0",
+  "description": "Build and test cross platform compatible html emails.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanrankin/myEmailBuilder.git"
+  },
+  "keywords": [
+    "html",
+    "email",
+    "build",
+    "test",
+    "cross-platform"
+  ],
+  "author": "Ryan Rankin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanrankin/myEmailBuilder/issues"
+  },
+  "homepage": "https://github.com/ryanrankin/myEmailBuilder"
+}
