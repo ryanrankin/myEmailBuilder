@@ -1,0 +1,44 @@
+/* Force Hotmail to display emails at full width */
+.ExternalClass
+{
+    width: 100%;
+    p,
+    span,
+    font,
+    td,
+    div
+    {
+        line-height: 100%;
+    }
+}
+
+body
+{
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+
+img
+{
+    -ms-interpolation-mode: bicubic;
+}
+
+p
+{
+    margin: 1em 0;
+}
+
+/** Outlook 07, 10 Padding issue */
+table td
+{
+    border-collapse: collapse;
+}
+
+/** Remove spacing around Outlook 07, 10 tables */
+table
+{
+    border-collapse: collapse;
+
+    mso-table-lspace: 0;
+    mso-table-rspace: 0;
+}
