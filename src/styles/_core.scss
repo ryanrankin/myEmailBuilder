@@ -1,3 +1,112 @@
 body{
 	font-style: $font-stack;
 }
+
+#bodyCell {
+  padding: 20px;
+}
+
+#templateContainer {
+  width: 600px;
+}
+
+body, #bodyTable {
+  background-color: #dee0e2;
+}
+
+#bodyCell {
+  border-top: 4px solid #bbb;
+}
+
+#templateContainer {
+  border: 1px solid #bbb;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  font-family: $font-stack;
+  font-size: 34px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 55px;
+  display: block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: 0;
+  text-align: left;
+  letter-spacing: normal;
+  color: #202020 !important;
+}
+
+h2 {
+  font-family: $font-stack;
+  font-size: 21px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 34px;
+  display: block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: 0;
+  text-align: left;
+  letter-spacing: normal;
+  color: #404040 !important;
+}
+
+h3 {
+  font-family: $font-stack;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 21px;
+  display: block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: 0;
+  text-align: left;
+  letter-spacing: normal;
+  color: #606060 !important;
+}
+
+h4 {
+  font-family: $font-stack;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 18px;
+  display: block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  text-align: left;
+  letter-spacing: normal;
+  color: #808080 !important;
+}
+
+h1, h2, h3, h4, h5, ul, ol, li, div, p, span, a, table {
+  font-family: $font-stack;
+}
+
+p {
+  font-family: $font-stack;
+  margin: 1em auto;
+  color: #333333;
+  font-size: 14px;
+  line-height: 20px;
+  a {
+    color: $council-red;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dotted $council-red;
+    -moz-transition: 1s all;
+    -webkit-transition: 1s all;
+    transition: 1s all;
+    &:hover{
+      border-bottom-style: solid;
+    }
+  }
+}

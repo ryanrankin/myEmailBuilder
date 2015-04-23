@@ -42,25 +42,59 @@ module.exports = function(grunt) {
                 src: 'Gruntfile.js'
             }
         },
+        copy: {
+            src: {
+                files: [{
+                    expand: true,
+                    cwd: "src",
+                    src: ["*.html"],
+                    dest: "tmp"
+                }]
+            }
+        },
+        'compile-handlebars': {
+            email: {
+                template: 'src/views/index.handlebars',
+                templateData: 'src/data/data.json',
+                output: 'tmp/index.html'
+            },
+        },
         watch: {
+            options: {
+                livereload: true
+            },
             gruntfile: {
                 files: '<%= jshint.gruntfile.src %>',
                 tasks: ['jshint:gruntfile']
             },
             sassfile: {
-              files: 'src/styles/*.scss',
-              tasks: ['sass:compile']
+                files: 'src/styles/*.scss',
+                tasks: ['sass:compile']
+            },
+            handlebars: {
+                files: 'src/**/*.handlebars',
+                tasks: ['compile-handlebars:email']
+            }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    base: 'tmp/'
+                }
             }
         }
     });
 
     // These plugins provide necessary tasks.
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-compile-handlebars');
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'watch']);
+    grunt.registerTask('default', ['compile-handlebars:email', 'connect', 'jshint', 'watch']);
 
 };

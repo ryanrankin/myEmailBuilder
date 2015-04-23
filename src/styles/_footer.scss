@@ -1,0 +1,30 @@
+#templateFooter {
+  border-top: 1px solid #fff;
+  background-color: #f4f4f4;
+}
+
+.footerContent {
+  font-family: Helvetica;
+  font-size: 10px;
+  line-height: 150%;
+  padding-top: 20px;
+  padding-right: 5%;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  text-align: left;
+  color: #808080;
+  a {
+    font-family: $font-stack;
+    font-size: 9px;
+    line-height: 30px;
+    &:link, &:visited, .yshortcuts, span {
+      font-weight: normal;
+      text-decoration: none;
+      color: $bright-blue;
+      line-height: 30px;
+    }
+    &.text {
+      border-bottom: $bright-blue dotted 2px;
+    }
+  }
+}
