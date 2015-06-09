@@ -6,12 +6,12 @@ body{
   padding: 20px;
 }
 
-#templateContainer {
-  width: 600px;
-}
-
 body, #bodyTable {
   background-color: #dee0e2;
+  margin: 55px auto;
+	padding:0;
+	width:100% !important;
+	line-height: 100% !important;
 }
 
 #bodyCell {
@@ -21,6 +21,8 @@ body, #bodyTable {
 #templateContainer {
   border: 1px solid #bbb;
   background-color: #f4f4f4;
+
+	width: 600px;
 }
 
 h1 {
@@ -95,8 +97,8 @@ p {
   font-family: $font-stack;
   margin: 1em auto;
   color: #333333;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 21px;
   a {
     color: $council-red;
     font-weight: bold;
@@ -107,6 +109,68 @@ p {
     transition: 1s all;
     &:hover{
       border-bottom-style: solid;
+    }
+  }
+}
+
+td.textContainer{
+  padding: 8px 13px;
+  &#title {
+    background-color: #F0F0F0;
+    h1, h2, h3, h4{
+      text-align: center;
+      margin: auto;
+    }
+  }
+  .invite{
+    text-align: center;
+    margin: 1em  auto;
+    font-size: 15px;
+    strong{
+      font-size: 18px;
+    }
+    small{
+      font-size: 10px;
+    }
+    .title, .speaker{
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#featured{
+  background-color: #efefef;/*#111111;*/
+	#featuredImage {
+		width: 600px !important;
+		height: 300px !important;
+	}
+  .dateContainer{
+    padding: 2px 5px;
+    p{
+      a{
+        color: #efefef;
+        text-decoration: none;
+        border-bottom: 0px dotted #efefef;
+      }
+    }
+  }
+}
+
+table.sponsorContainer{
+  padding: 13px auto;
+  width: 100%;
+  td.textContainer, & h2{
+    text-align: center;
+    margin:auto;
+    a{
+      text-decoration: none !important;
+      margin: 0px;
+    }
+    img{
+      height: 55px;
+      width: auto;
+			display: inline-block;
     }
   }
 }

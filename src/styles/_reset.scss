@@ -11,17 +11,45 @@ img
 
     text-decoration: none;
 
+    -ms-interpolation-mode: bicubic;
+
     border: none;
     outline: none;
+
+    display: block;
+}
+
+a img {
+  border:none;
+}
+
+table td {
+  border-collapse: collapse;
 }
 
 table
 {
     border-collapse: collapse !important;
+    border-collapse:collapse;
+    mso-table-lspace:0pt;
+    mso-table-rspace:0pt;
 }
 
 body
 {
     width: 100% !important;
     height: 100% !important;
+    padding:0 !important;
+}
+
+.center
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left
+{
+    text-align: left;
 }

@@ -1,28 +1,50 @@
 {
-  "buttons": [],
+  "buttons": [
+    {
+      "text": "Register now",
+      "url": "https://www.dfwworld.org/GlobalForum/Register"
+    }
+  ],
   "date": [
-    "Wed Apr 15 18:30:00 2015"
+    "Fri Jun 26 08:00:00 2015"
+  ],
+  "time": [
+    "8:00 AM Breakfast",
+    "8:15 AM Program"
   ],
   "img": {
-    "size": "",
-    "url": "http://dfwworld.org/image/SH_AmyHofland.jpg"
+    "size": "full",
+    "url": "https://www.dfwworld.org/image/GF_AdrianWooldridge.jpg"
   },
   "location": [
     {
-      "text": "The Crow Collection of Asian Art,  2010 Flora St,  Dallas, TX 75201",
-      "url": "https://goo.gl/maps/JNJHL"
+      "text": "Haynes and Boone, LLP, 2323 Victory Avenue, Suite 700, Dallas, TX 75219",
+      "url": "https://goo.gl/maps/WX3Ml"
     }
   ],
   "paragraphs": [
-    "As Executive Director of the Crow Collection of Asian Art, Amy Lewis Hofland leads the preeminent museum dedicated to the works of China, Japan, India, Korea and Southwest Asia in the southern United States. On staff since the Crow Collection’s inception in 1998, Hofland’s footprint can be found throughout the museum’s offerings.",
-    "Under her leadership, the Crow Collection implemented two wildly successful monthly community-focused programs: Adventure Asia: Family Days at the Crow and Crow Collection After Dark, which combined drew over 30,000 people last year to learn about the arts and cultures of Asia. An art educator at heart, Hofland served as a teacher at Armstrong Elementary School in Highland Park, Texas, before a stint at the Metropolitan Museum of Art as a graduate student led her to the museum world. Hofland holds a Bachelor of Fine Arts degree from the University of Texas at Austin and a Master of Arts degree in art education from the University of North Texas, where she was part of the distinguished Marcus Fellow program. In addition to her work at the Crow Collection, Hofland is a noted author, speaker and community leader serving on various board leadership positions in the Dallas-Fort Worth community."
+    "Join us on June 26 for the latest Global Forum event where <em>The Economist</em>'s influential Schumpeter Columnist Adrian Wooldridge will discuss his new book, <em>The Great Disruption</em>. The book by Wooldridge, who is also management editor for <em>The Economist</em>, has a hint of optimism in its subtitle: \"How Business Is Coping With Turbulent Times.\"",
+    "The term \"The Great Disruption\" refers to what the online Urban Dictionary calls \"a frightening new historical era that began in 2008 with the crash of world economies and the simultaneous collapse of trust in governing institutions.\" Wooldridge's book, a collection of his Schumpeter columns, is described as \"addressing the causes and profound consequences of the unprecedented disruption of business over the past five years.\""
+  ],
+  "series": [
+    {
+      "text": "",
+      "url": ""
+    }
   ],
   "speaker": {
-    "name": "Global Forum with Amy Hofland",
-    "title": "Executive Director, The Trammell & Margaret Crow Collection of Asian Art"
+    "name": "Adrian Wooldridge",
+    "title": "Management Editor and Schumpeter Columnist, <em>The Economist</em>"
   },
-  "title": "The Lotus Unfolds: The Crow Collection’s Next Chapter in the Dallas Arts District",
+  "sponsors": {
+    "coop": [],
+    "custom": [],
+    "media": [],
+    "partners": [],
+    "sponsors": []
+  },
+  "title": "The Great Disruption",
   "urls": [
-    "http://dfwworld.org/Events?cid=5&ceid=2351&cerid=0&cdt=4%2f15%2f2015"
+    "https://www.dfwworld.org/Events?cid=5&ceid=2393&cerid=0&cdt=6%2f26%2f2015"
   ]
 }

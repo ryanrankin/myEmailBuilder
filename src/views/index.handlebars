@@ -5,209 +5,248 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>{{ title }}</title>
+  <!-- build:css inline styles/main.css -->
   <link href="styles/main.css" rel="stylesheet" type="text/css" />
+  <!-- /build -->
+  <!-- build:css inline styles/mediaQueries.css -->
+  <link href="styles/mediaQueries.css" rel="stylesheet" type="text/css" />
+  <!-- /build -->
 </head>
 
 <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
   <!--[if gte mso 9]>
     <style>
       /* Target Outlook 2007 and 2010 */
+          a[href^='tel'],
+          a[href^='sms']
+          {
+              cursor: default;
+              text-decoration: none;
+              pointer-events: none;
+
+              color: #111;
+          }
     </style>
-  <![endif]-->
-  <center>
-    <table id="bodyTable" align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
-      <tr>
-        <td id="bodyCell" align="center" valign="top">
-          <table id="templateContainer" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td id="templatePreheader" align="center" valign="top" class="preheaderContent">
-                <!-- BEGIN PREHEADER //-->
-
-                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <![endif]-->
+    <center>
+      <div id="topBar" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" height="55" bgcolor="#FFFFFF">
+        <table width="600" height="55" bgcolor="#FFFFFF">
+          <tr>
+            <td align="center" height="auto" width="240" style="width: 240px;">
+              <table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                <tbody>
+                  <td align="center" valign="middle" width="100"><a href="https://www.dfwworld.org/GlobalForum/Invitation" target="_blank">View in Browser</a></td>
+                  <td align="center" valign="middle" width="40">&nbsp;|&nbsp;</td>
+                  <td align="center" valign="middle" width="100"><a href="https://www.dfwworld.org/target=&amp;pid=1496&amp;did=0&amp;tab=0" target="_blank">Privacy Policy</a></td>
+                </tbody>
+              </table>
+            </td>
+            <td align="center" height="auto" width="180" style="width: 180px;">
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tbody>
                   <tr>
-                    <td align="center" valign="top" width="30%" class="logo">
-                      <a href="https://www.dfwworld.org" target="_blank"><img src=
-                      "https://www.dfwworld.org/image/LG_WAC.gif" alt="World Affairs Council of Dallas/Fort Worth"
-                      title="World Affairs Council of Dallas/Fort Worth" height="60" width="auto" style=
-                      "height: 60px; width: auto; padding: 5px;" /></a>
-                    </td>
-
-                    <td align="right" valign="top" width="60%" class="share">
-                      <img src="http://www.dfwworld.org/image/logos/GlobalForum.jpg" height="60" width="auto" style=
-                      "height: 60px; width: auto; padding: 5px;">
+                    <td valign="middle" align="center" width="180" class="text">
+                      <a href="https://www.dfwworld.org/GlobalForum" target="_blank" class="text">More Global Forum Events</a>
                     </td>
                   </tr>
-                </table><!-- // END PREHEADER   -->
-              </td>
-            </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table id="bodyTable" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td id="bodyCell" align="center" valign="top">
 
-            <tr>
-              <td id="featured" align="center" valign="top" style="padding-top:0px;" class="templateColumnContainer">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                  <tr>
-                    <td class="leftColumnContent">
-                      <a href="{{ urls.[0] }}"
-                      target="_blank"><img src="{{ img.url }}" width="100%" style=
-                      "max-width:600px;" class="columnImage" /></a>
-                    </td>
-                  </tr>
+            <table id="templateContainer" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td class="ImageContainer full" align="center" valign="top">
+                  <img src="https://www.dfwworld.org/image/EM_GlobalForumHeader.jpg" />
+                </td>
+              </tr>
 
-                  <tr>
-                    <td align="center" valign="middle" width="100%" class="dateContainer">
-                      <p><a href="https://www.dfwworld.org/Events?cid=5&amp;ceid=2339&amp;cerid=0&amp;cdt=5%2f5%2f2015"
-                      target="_blank" title=
-                      "Learn more about {{ title }} and how to join us →">{{ date }},</a>&nbsp;<a href=
-                      "https://www.dfwworld.org/Events?cid=5&amp;ceid=2339&amp;cerid=0&amp;cdt=5%2f5%2f2015" target=
-                      "_blank" title="Learn more about {{ title }} and how to join us →">at {{ location.[0].text }}.</a></p>
-                    </td>
-                  </tr>
+              <tr>
+                <td id="featured" align="center" valign="top" style="padding-top:0px;" class="templateColumnContainer" width="600">
+                  <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="ImageContainer full" align="center" valign="top">
+                        <a href="{{ urls.[0] }}" target="_blank">
+                          <img id="featuredImage" src="{{ img.url }}" alt="As a member of the Global Forum, you are cordially invited to attend {{ title }}  with {{ speaker.name }}" title="As a member of the Global Forum, you are cordially invited to attend {{ title }}  with {{ speaker.name }}" />
+                        </a>
+                      </td>
+                    </tr>
 
-                  <tr>
-                    <td valign="top" style="background-color: #F4F4F4;" bgcolor="#F4F4F4" class=
-                    "leftColumnContent textContainer">
-                      <h2>{{ title }}</h2>
-                      {{#if speaker.name }}
-                        <h3> {{ speaker.name }}</h3>
-                      {{/if}}
-                      {{#if speaker.title }}
-                        <h4>{{ speaker.title }}</h4>
-                      {{/if}}
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
+                    <tr>
+                      <td valign="top" style="background-color: #FFFFFF;" bgcolor="#FFFFFF" class="leftColumnContent textContainer">
+                        <p align="left" class="left">Dear &lt;Nickname&gt;,</p>
 
-            <tr>
-              <td align="center" valign="top">
-                <table id="templateBody" border="0" cellpadding="0" cellspacing="0" width="100%">
-                  <tr>
-                    <td valign="top" class="bodyContent">
-                      <table class="sponsors">
-                        <tr>
-                          <td class="textContainer">
-                            <h2>Media Sponsor</h2>
 
-                            <div class="sponsors custom"><img align="center" valign="center" alt="DCEO" height="120"
-                            src="https://www.dfwworld.org/image/LG_DCEO.jpg" title="DCEO" width="auto" style=
-                            "height: 120px; width: auto;" /></div>
-                          </td>
-                        </tr>
-                      </table>
+                        <p align="center" class="center invite">
+                          Global Forum members are cordially invited to attend
+                          <br />
+                          <br />
+                          <span class="title">
+                            <strong>{{ title }} </strong>
+                          </span>
+                          <br />
+                          <small>with</small>
+                          <br />
+                          <span class="speaker">
+                            <strong>{{ speaker.name }}</strong>
+                            <br />
+                            <small>
+                              {{{ speaker.title }}}
+                            </small>
+                          </span>
+                          <br />
+                          <br />
+                          <span class="date">
+                            {{ date }}
+                          </span>
+                          <br />
+                          <span class="time">
+                            {{#each time}}
+                            {{{this}}}
+                            <br />
+                            {{/each}}
+                          </span>
+                          <span class="location">
+                            {{ location }}
+                          </span>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top" style="background-color: #FFFFFF;" bgcolor="#FFFFFF" class="leftColumnContent textContainer">
+                        <p align="left" class="left">
+                          {{#each paragraphs}}
+                          {{{this}}}
+                          <br />
+                          <br />
+                          {{/each}}
+                        </p>
+                      </td>
+                    </tr>
 
-                      <table>
-                        <tr>
-                          <td align="center" width="300">
-                            <table class="outlook-button" width="180" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td align="center" valign="middle" width="180" height="44" bgcolor="#A00008">
-                                  <a href="{{ urls.[0] }}" target="_blank" style=
-                                  "height: 44px; line-height: 44px;">LEARN MORE &rarr;</a>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
+                    <tr>
+                      <td align="center" valign="top" bgcolor="#FFFFFF">
 
-                          <td align="center" width="300">
-                            <table class="outlook-button" width="180" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td align="center" valign="middle" width="180" height="44" bgcolor="#A00008">
-                                  <a href=
-                                  "https://www.dfwworld.org/GlobalForum/Register"
-                                  target="_blank" style="height: 44px; line-height: 44px;">REGISTER NOW &rarr;</a>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-
-            <tr>
-              <td id="templateFooter" align="center" valign="top" class="footerContent">
-                <!-- BEGIN FOOTER //-->
-
-                <table width="100%">
-                  <tr>
-                    <td align="center" valign="top" width="60%" height="40" class="help">
-                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tbody>
-                          <tr style="border-collapse: collapse;">
-                            <td style="border-collapse: collapse;" width="30%">
-                              <a href="https://www.dfwworld.org/RickPerry" target="_blank">View in Browser</a>
+                        <table cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" width="300" height="44">
+                              <table class="outlook-button" width="180" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td align="center" valign="middle" width="180" height="34" bgcolor="#A00008">
+                                    <a href="{{ urls.[0] }}" target="_blank">LEARN MORE&nbsp;&rarr;&nbsp;</a>
+                                  </td>
+                                </tr>
+                              </table>
                             </td>
 
-                            <td style="border-collapse: collapse;" width="30%">
-                              <a href="target=&amp;pid=1496&amp;did=0&amp;tab=0" target="_blank">Privacy Policy</a>
-                            </td>
-
-                            <td style="border-collapse: collapse;" width="30%">
-                              <a href="target=&amp;pid=1497&amp;did=0&amp;tab=0" target="_blank">Unsubscribe</a>
+                            <td align="center" width="300" height="44">
+                              <table class="outlook-button" width="180" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td align="center" valign="middle" width="180" height="34" bgcolor="#A00008">
+                                    <a href="{{ register }}" target="_blank">REGISTER NOW&nbsp;&rarr;&nbsp;</a>
+                                  </td>
+                                </tr>
+                              </table>
                             </td>
                           </tr>
-                        </tbody>
-                      </table>
-                    </td>
+                        </table>
 
-                    <td align="right" valign="top" width="30%" class="share">
-                      <table border="0" cellpadding="0" cellspacing="0" height="40">
-                        <tbody>
-                          <tr style="border-collapse: collapse;">
-                            <td valign="top" align="center" width="12.5%" height="25" class="icon-container">
-                              <a href=
-                              "http://www.facebook.com/sharer.php?u=https://www.dfwworld.org/RickPerry&amp;t=Join%20the%20global%20conversation%20=%3E%20%0D%0A%0D%0A"
-                              target="_blank"><img src="http://www.dfwworld.org/image/facebook_icon_blue_round.gif"
-                              alt="Facebook icon" border="0" height="25" width="25" /></a>
-                            </td>
+                      </td>
+                    </tr>
 
-                            <td valign="top" align="left" width="20%" height="25" class="text">
-                              <a href=
-                              "http://www.facebook.com/sharer.php?u=https://www.dfwworld.org/RickPerry&amp;t=Join%20the%20global%20conversation%20=%3E%20%0D%0A%0D%0A"
-                              target="_blank" class="text">Post</a>
-                            </td>
+                    <tr>
+                      <td valign="top" align="center" style="background-color: #FFFFFF;" bgcolor="#FFFFFF" class="leftColumnContent textContainer center">
+                        <p>
+                          For questions, please contact Casey Reynoso
+                          <br />
+                          <a href='tel:2149651821' target='_blank'>214-965-8421</a> or <a href='mailto:creynoso@dfwworld.org' target='_blank'>creynoso@dfwworld.org</a>.
+                          <br />
+                          This invitation is complimentary and non-transferable.
+                        </p>
+                      </td>
+                    </tr>
 
-                            <td valign="top" align="center" width="12.5%" height="25" class="icon-container">
-                              <a href=
-                              "http://twitter.com/intent/tweet?url=https://www.dfwworld.org/RickPerry&amp;text=Join%20the%20global%20conversation%20=%3E%20%0D%0A%0D%0A&amp;via=dfwworld&amp;related=dfwworld"
-                              target="_blank"><img src="http://www.dfwworld.org/image/twitter_icon_blue_round.gif" alt=
-                              "Twitter icon" border="0" height="25" width="25" /></a>
-                            </td>
-
-                            <td valign="top" align="left" width="20%" height="25" class="text">
-                              <a href=
-                              "http://twitter.com/intent/tweet?url=https://www.dfwworld.org/RickPerry&amp;text=Join%20the%20global%20conversation%20=%3E%20%0D%0A%0D%0A&amp;via=dfwworld&amp;related=dfwworld"
-                              target="_blank" class="text">Tweet</a>
-                            </td>
-
-                            <td valign="top" align="center" width="12.5%" height="25" class="icon-container">
-                              <a href=
-                              "mailto:?subject=FW:%20WACDFW%20-%20The%20Honorable%20Rick%20Perry&amp;body=Join%20the%20global%20conversation%20=%3E%20%0D%0A%0D%0Ahttps://www.dfwworld.org/RickPerry%0D%0A%0D%0Aor%20view%20as%20downloadable%20pdf%20-%3E%20https://www.dfwworld.org/document.doc?id=482."
-                              target="_blank"><img src="http://www.dfwworld.org/image/email_icon_blue_round.gif" alt=
-                              "Forward icon" border="0" height="25" width="25" /></a>
-                            </td>
-
-                            <td valign="top" align="left" width="20%" height="25" class="text">
-                              <a href=
-                              "mailto:?subject=FW:%20WACDFW%20-%20The%20Honorable%20Rick%20Perry&amp;body=Join%20the%20global%20conversation%20=%3E%20%0D%0A%0D%0Ahttps://www.dfwworld.org/RickPerry%0D%0A%0D%0Aor%20view%20as%20downloadable%20pdf%20-%3E%20https://www.dfwworld.org/document.doc?id=482."
-                              target="_blank" class="text">Forward</a>
+                    <tr>
+                      <td align="center" valign="top" width="600">
+                        <table id="templateBody" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
+                          <tr>
+                            <td valign="top" class="bodyContent">
+                              <table class="sponsorContainer">
+                                <tr>
+                                  <td class="textContainer" align="center">
+                                    <h2>Global Forum Sponsors:</h2>
+                                    <div class="sponsors custom">
+                                      <a href="http://www.dmagazine.com/publications/d-ceo">
+                                        <img alt="D CEO" src="https://www.dfwworld.org/image/LG_GF_DCEO.jpg" title="D CEO">
+                                      </a>
+                                      <a href="http://www.haynesboone.com">
+                                        <img alt="Haynes &amp; Boone, LLP" src="https://www.dfwworld.org/image/LG_GF_HaynesBoone.jpg" title="Haynes &amp; Boone, LLP">
+                                      </a>
+                                      <a href="http://www.oldparkland.com">
+                                        <img alt="Old Parkland" title="Old Parkland" src="https://www.dfwworld.org/image/LG_GF_OldParkland.jpg">
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+                                </table>
                             </td>
                           </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </table><!-- // END FOOTER-->
-              </td>
-            </tr>
-          </table><!-- // END TEMPLATE-->
-        </td>
-      </tr>
-    </table>
-  </center>
-</body>
-</html>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td id="templateFooter" align="center" valign="top" class="footerContent">
+                        <!-- BEGIN FOOTER //-->
+
+                        <table width="100%">
+                          <tr>
+                            <td align="center" valign="top" width="60%" class="help">
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tbody>
+                                  <tr style="border-collapse: collapse;">
+                                    <td style="border-collapse: collapse;" width="30%">
+                                      <a href="https://www.dfwworld.org/GlobalForum/Invitation" target="_blank">View in Browser</a>
+                                    </td>
+
+                                    <td style="border-collapse: collapse;" width="30%">
+                                      <a href="target=&amp;pid=1496&amp;did=0&amp;tab=0" target="_blank">Privacy Policy</a>
+                                    </td>
+
+                                    <td style="border-collapse: collapse;" width="30%">
+                                      <a href="target=&amp;pid=1497&amp;did=0&amp;tab=0" target="_blank">Unsubscribe</a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+
+                            <td align="center" valign="top" width="40%" class="share">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                  <tr style="border-collapse: collapse;">
+                                      <td valign="top" align="left" width="100%" class="text">
+                                        <a href="https://www.dfwworld.org/GlobalForum"
+                                        target="_blank" class="text">More Global Forum Events</a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </table><!-- // END FOOTER-->
+                        </td>
+                      </tr>
+                    </table><!-- // END TEMPLATE-->
+                  </td>
+                </tr>
+              </table>
+            </center>
+            <script src="//localhost:35729/livereload.js"></script>
+          </body>
+          </html>

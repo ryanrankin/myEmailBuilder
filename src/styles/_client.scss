@@ -1,15 +1,16 @@
 /* Force Hotmail to display emails at full width */
 .ExternalClass
 {
-    width: 100%;
-    p,
-    span,
-    font,
-    td,
-    div
-    {
-        line-height: 100%;
-    }
+  line-height: 100%;
+  width: 100%;
+  p,
+  span,
+  font,
+  td,
+  div
+  {
+    line-height: 100%;
+  }
 }
 
 body

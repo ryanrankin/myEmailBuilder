@@ -6,18 +6,39 @@ img {
   line-height: 100%;
   height: auto;
   text-decoration: none;
+  -ms-interpolation-mode: bicubic;
   border: none;
-  outline: none; }
+  outline: none;
+  display: block; }
+
+a img {
+  border: none; }
+
+table td {
+  border-collapse: collapse; }
 
 table {
-  border-collapse: collapse !important; }
+  border-collapse: collapse !important;
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
 
 body {
   width: 100% !important;
-  height: 100% !important; }
+  height: 100% !important;
+  padding: 0 !important; }
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+.left {
+  text-align: left; }
 
 /* Force Hotmail to display emails at full width */
 .ExternalClass {
+  line-height: 100%;
   width: 100%; }
   .ExternalClass p,
   .ExternalClass span,
@@ -52,18 +73,20 @@ body {
 #bodyCell {
   padding: 20px; }
 
-#templateContainer {
-  width: 600px; }
-
 body, #bodyTable {
-  background-color: #dee0e2; }
+  background-color: #dee0e2;
+  margin: 55px auto;
+  padding: 0;
+  width: 100% !important;
+  line-height: 100% !important; }
 
 #bodyCell {
   border-top: 4px solid #bbb; }
 
 #templateContainer {
   border: 1px solid #bbb;
-  background-color: #f4f4f4; }
+  background-color: #f4f4f4;
+  width: 600px; }
 
 h1 {
   font-family: Helvetica, Arial, sans-serif;
@@ -132,8 +155,8 @@ p {
   font-family: Helvetica, Arial, sans-serif;
   margin: 1em auto;
   color: #333333;
-  font-size: 14px;
-  line-height: 20px; }
+  font-size: 13px;
+  line-height: 21px; }
   p a {
     color: #A00008;
     font-weight: bold;
@@ -145,12 +168,57 @@ p {
     p a:hover {
       border-bottom-style: solid; }
 
+td.textContainer {
+  padding: 8px 13px; }
+  td.textContainer#title {
+    background-color: #F0F0F0; }
+    td.textContainer#title h1, td.textContainer#title h2, td.textContainer#title h3, td.textContainer#title h4 {
+      text-align: center;
+      margin: auto; }
+  td.textContainer .invite {
+    text-align: center;
+    margin: 1em  auto;
+    font-size: 15px; }
+    td.textContainer .invite strong {
+      font-size: 18px; }
+    td.textContainer .invite small {
+      font-size: 10px; }
+    td.textContainer .invite .title, td.textContainer .invite .speaker {
+      font-family: Georgia, serif;
+      text-transform: uppercase; }
+
+#featured {
+  background-color: #efefef;
+  /*#111111;*/ }
+  #featured #featuredImage {
+    width: 600px !important;
+    height: 300px !important; }
+  #featured .dateContainer {
+    padding: 2px 5px; }
+    #featured .dateContainer p a {
+      color: #efefef;
+      text-decoration: none;
+      border-bottom: 0px dotted #efefef; }
+
+table.sponsorContainer {
+  padding: 13px auto;
+  width: 100%; }
+  table.sponsorContainer td.textContainer, table.sponsorContainer h2 {
+    text-align: center;
+    margin: auto; }
+    table.sponsorContainer td.textContainer a, table.sponsorContainer h2 a {
+      text-decoration: none !important;
+      margin: 0px; }
+    table.sponsorContainer td.textContainer img, table.sponsorContainer h2 img {
+      height: 55px;
+      width: auto;
+      display: inline-block; }
+
 .outlook-button {
   width: 180px;
-  height: 60px; }
+  height: 44px; }
   .outlook-button td {
     background: #A00008;
-    padding: 0;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-bottom: 4px solid #800000;
@@ -159,38 +227,93 @@ p {
     font-weight: bold;
     text-decoration: none;
     font-family: Helvetica, Arial, sans-serif;
-    display: block; }
+    display: block;
+    vertical-align: middle;
+    padding: 13px 5px; }
     .outlook-button td a {
       width: 100%;
-      height: 44px;
-      line-height: 44px;
+      line-height: 34px;
       color: #FFFFFF;
       text-decoration: none;
-      font-weight: bold; }
+      font-weight: bold;
+      vertical-align: middle;
+      display: inline-block; }
+
+#topBar {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  opacity: .95;
+  border-bottom: 3px solid #e8e8e8;
+  background-color: #FFFFFF !important; }
+  #topBar table {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 55px; }
+  #topBar td {
+    border-collapse: collapse;
+    line-height: 55px;
+    margin: auto;
+    mso-line-height-rule: exactly;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #FFFFFF !important; }
+  #topBar a {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #083A81;
+    font-size: 10px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    margin: 0;
+    mso-line-height-rule: exactly;
+    padding: 0;
+    text-decoration: none; }
+    #topBar a:hover:after {
+      content: "\0020\2192"; }
+
+.ImageContainer {
+  font-size: 13px;
+  line-height: 100%;
+  padding: 0;
+  vertical-align: middle; }
+  .ImageContainer.full {
+    font-size: 21px; }
+    .ImageContainer.full img {
+      max-width: 600px; }
+  .ImageContainer img {
+    height: auto;
+    text-decoration: none; }
 
 #templateFooter {
-  border-top: 1px solid #fff;
+  border-top: 2px solid #E5E5E5;
   background-color: #f4f4f4; }
 
 .footerContent {
   font-family: Helvetica;
   font-size: 10px;
-  line-height: 150%;
-  padding-top: 20px;
-  padding-right: 5%;
-  padding-bottom: 20px;
-  padding-left: 5%;
+  line-height: 21px;
+  padding-top: 13px;
+  padding-right: 13px;
+  padding-bottom: 13px;
+  padding-left: 21px;
   text-align: left;
   color: #808080; }
   .footerContent a {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 9px;
-    line-height: 30px; }
+    line-height: 21px; }
     .footerContent a:link, .footerContent a:visited, .footerContent a .yshortcuts, .footerContent a span {
       font-weight: normal;
       text-decoration: none;
       color: #2A5EB9;
-      line-height: 30px; }
+      line-height: 21px; }
     .footerContent a.text {
       border-bottom: #2A5EB9 dotted 2px; }
 

@@ -1,9 +1,8 @@
 .outlook-button{
   width: 180px;
-  height: 60px;
+  height: 44px;
   td{
     background: $council-red;
-    padding:0;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-bottom: 4px solid #800000;
@@ -13,13 +12,16 @@
     text-decoration: none;
     font-family: $font-stack;
     display: block;
+    vertical-align: middle;
+    padding: 13px 5px;
     a {
         width: 100%;
-        height: 44px;
-        line-height: 44px;
-        color: #FFFFFF; 
+        line-height: 34px;
+        color: #FFFFFF;
         text-decoration: none;
         font-weight: bold;
+        vertical-align: middle;
+        display:inline-block;
     }
   }
 }

@@ -1,0 +1,14 @@
+@media only screen and (max-device-width: 960px), (max-width: 640px) {
+  td.textContainer p {
+    font-size: 15px !important; }
+  td.textContainer p.invite {
+    text-align: center !important;
+    margin: 1em  auto !important;
+    font-size: 18px !important;
+    line-height: 21px; }
+    td.textContainer p.invite strong {
+      font-size: 21px !important; }
+    td.textContainer p.invite small {
+      font-size: 13px !important; } }
+
+/*# sourceMappingURL=mediaQueries.css.map */
